@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E43B991C-EA65-417C-92F7-5C16AC99C456}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Ex03.GarageLogic</RootNamespace>
+    <AssemblyName>Ex03.GarageLogic</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Enums\eEngineEnergyTypes.cs" />
+    <Compile Include="Enums\eNumOfWheels.cs" />
+    <Compile Include="Enums\eSupportedVehicels.cs" />
+    <Compile Include="Enums\eVehicleTypes.cs" />
+    <Compile Include="Enums\KSupportedParameters.cs" />
+    <Compile Include="Exceptions\ValueOutOfRangeExecption.cs" />
+    <Compile Include="Garage.cs" />
+    <Compile Include="Params\HoldAddGarageVehicleParams.cs" />
+    <Compile Include="Params\HoldEngineParams.cs" />
+    <Compile Include="Params\HoldVehicleParams.cs" />
+    <Compile Include="Params\HoldWheelParams.cs" />
+    <Compile Include="Parts\ElectricEngine.cs" />
+    <Compile Include="Parts\Engine.cs" />
+    <Compile Include="Parts\FuelEngine.cs" />
+    <Compile Include="Parts\Wheel.cs" />
+    <Compile Include="VehicalGarageCreator.cs" />
+    <Compile Include="VehicleInGarage.cs" />
+    <Compile Include="Vehicle\Car.cs" />
+    <Compile Include="Vehicle\Motorcycle..cs" />
+    <Compile Include="Vehicle\Truck.cs" />
+    <Compile Include="Vehicle\Vehicle.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
